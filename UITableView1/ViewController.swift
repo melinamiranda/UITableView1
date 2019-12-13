@@ -52,9 +52,8 @@ class ViewController: UIViewController, UITableViewDataSource {
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
     
-    cell.textLabel?.text  = contacts[indexPath.row].name
-    cell.detailTextLabel?.text  = contacts[indexPath.row].surname
- 
+    cell.textLabel?.text  = contacts[indexPath.row].surname
+//cell.textLabel?.text  = contacts[indexPath.row].surname
           return cell
     }
    
