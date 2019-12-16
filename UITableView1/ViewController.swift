@@ -20,15 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var surnamelabel: UILabel!
     @IBOutlet weak var TitleTableView: UILabel!
     
-    
-    
-    @IBAction func ButtonContacts(_ sender: UIButton) {
-    }
-    
     var contacts = [Contact]()
-    
-        
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,18 +53,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Contact.init(name: "Gaston", surname: "Rodriguez"),
         Contact.init(name: "Liliana", surname: "Perez"),
         Contact.init(name: "Ramiro", surname: "Lopez"),
-
-
-        
-
-
         ]
-      
-        
-       // tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+
     }
-    
-   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -93,10 +76,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     cell?.textLabel?.textColor = UIColor.white
     cell?.detailTextLabel?.textColor = UIColor.white
     
-    
     return cell!
-    
-     
 }
 
 }
