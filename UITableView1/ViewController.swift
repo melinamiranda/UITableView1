@@ -9,17 +9,24 @@
 import UIKit
 
 
-
 struct Contact {
        var name:String?
-       var surname:String?
+    //var surname:String?
+    var TitleTableView:String?
    }
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var namelabel: UILabel!
-    @IBOutlet weak var surnamelabel: UILabel!
-
+   // @IBOutlet weak var surnamelabel: UILabel!
+    @IBOutlet weak var TitleTableView: UILabel!
+    
+    
+    @IBAction func ButtonContacts(_ sender: UIButton) {
+        
+        
+    }
+    
     var contacts = [Contact]()
    
     
@@ -27,7 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
     
         contacts = [
-        Contact.init(name: "Melina", surname: "Miranda"),
+        /*Contact.init(name: "Melina", surname: "Miranda"),
         Contact.init(name: "Julieta", surname: "Delaven"),
         Contact.init(name: "Mario", surname: "Miranda"),
         Contact.init(name: "Diego", surname: "Dia"),
@@ -36,25 +43,40 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Contact.init(name: "Mariano", surname: "Ferreyra"),
         Contact.init(name: "Gaston", surname: "Rodriguez"),
         Contact.init(name: "Liliana", surname: "Perez"),
-        Contact.init(name: "Ramiro", surname: "Lopez"),
-        Contact.init(name: "Melina", surname: "Miranda"),
-               Contact.init(name: "Julieta", surname: "Delaven"),
-               Contact.init(name: "Mario", surname: "Miranda"),
-               Contact.init(name: "Diego", surname: "Dia"),
-               Contact.init(name: "Facundo", surname: "Fernandez"),
-               Contact.init(name: "Guido", surname: "Juarez"),
-               Contact.init(name: "Mariano", surname: "Ferreyra"),
-               Contact.init(name: "Gaston", surname: "Rodriguez"),
-               Contact.init(name: "Liliana", surname: "Perez"),
-               Contact.init(name: "Ramiro", surname: "Lopez"),
+        Contact.init(name: "Ramiro", surname: "Lopez"),*/
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+
+        Contact.init(name: "Melina Miranda"),
+            Contact.init(name: "Melina Miranda"),
+        Contact.init(name: "Melina Miranda"),
+
+        
+
         ]
-        _ = tableView.register(UINib(nibName: "ViewController", bundle: nil), forCellReuseIdentifier: "MyCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
     }
     
-    internal func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-       return "Names"
-    }
+   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -63,18 +85,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
 
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    var cell = tableView.dequeueReusableCell(withIdentifier: "MyCell")
-    
-    if cell == nil{
-        cell = UITableView.dequeueReusableCel
-    
-    }
-        cell?.textLabel?.text  = contacts[indexPath.row].name
-      cell?.detailTextLabel?.text  = contacts[indexPath.row].surname
-    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
    
+        cell.textLabel?.text  = contacts[indexPath.row].name
+        //cell.detailTextLabel?.text  = contacts[indexPath.row].surname
+    return cell
 
-    return cell!
+    
+    
+    
      
 }
 
