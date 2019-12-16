@@ -90,7 +90,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     cell?.detailTextLabel?.text  = contacts[indexPath.row].surname
 
     cell?.backgroundColor = UIColor.lightGray
-    cell?.textLabel?.textColor = UIColor.black
+    cell?.textLabel?.textColor = UIColor.white
+    cell?.detailTextLabel?.textColor = UIColor.white
+    
     
     return cell!
     
