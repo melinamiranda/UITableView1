@@ -17,13 +17,13 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pwq-ID-mZD">
                                 <rect key="frame" x="0.0" y="39" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FQr-8f-qwR">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <connections>
@@ -40,12 +40,11 @@
                         <outlet property="TitleTableView" destination="FQr-8f-qwR" id="q23-PV-dbg"/>
                         <outlet property="tableView" destination="Pwq-ID-mZD" id="7MW-Ux-UhI"/>
                         <outlet property="view" destination="Pwq-ID-mZD" id="iTy-ky-Syy"/>
-                        <segue destination="6Nc-EE-NDu" kind="show" id="vmq-wq-5rR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5684" y="-1381"/>
+            <point key="canvasLocation" x="-5684.057971014493" y="-1381.4732142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cJK-GQ-iN6">
@@ -92,22 +91,6 @@
                 <exit id="1Xt-y7-5EN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-6466.666666666667" y="-1345.9821428571429"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="bxt-gg-rZQ">
-            <objects>
-                <viewController id="6Nc-EE-NDu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="B8M-up-h9C">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="IOd-pb-gnC"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Z3r-eJ-oFl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HGD-jt-14t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4920" y="-1358"/>
         </scene>
     </scenes>
 </document>
